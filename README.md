@@ -100,7 +100,7 @@ import {
 } from 'non-overlapping-recurring-task';
 import { Producer, Message } from '@confluentinc/kafka-javascript';
 
-const FLUSH_INTERVAL_MS = 3000;
+const PUBLISH_INTERVAL_MS = 3000;
 
 class KafkaBatchPublisher {
   private readonly _producer: Producer;
@@ -109,7 +109,7 @@ class KafkaBatchPublisher {
 
   constructor(
     producer: Producer,
-    numberOfMessagesInBatch: number
+    messagesPerBatch: number
   ) {
     this._producer = producer;
     this._accumulator = new KeyedBatchedAccumulator<Message>(
@@ -117,7 +117,7 @@ class KafkaBatchPublisher {
     );
 
     const recurringPublishOptions: INonOverlappingRecurringTaskOptions = {
-      intervalMs: FLUSH_INTERVAL_MS,
+      intervalMs: PUBLISH_INTERVAL_MS,
       immediateFirstRun: false
     };
     this._publishTask = new NonOverlappingRecurringTask<MongoError>(

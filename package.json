@@ -1,6 +1,6 @@
 {
   "name": "keyed-batched-items-accumulator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight utility for Node.js projects that accumulates items into fixed-size batches per key, preserving insertion order within each key. Streams items directly into their respective batches at runtime, eliminating the overhead of post-processing 1D arrays into chunks. It abstracts key-based batch management, allowing users to focus on application logic. Ideal for delayed processing tasks such as bulk writes per tenant, per-topic Kafka publishing, or key-partitioned data ingestion workflows.",
   "repository": {
     "type": "git",
