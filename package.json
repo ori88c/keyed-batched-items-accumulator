@@ -1,0 +1,79 @@
+{
+  "name": "keyed-batched-items-accumulator",
+  "version": "1.0.0",
+  "description": "A lightweight utility for Node.js projects that accumulates items into fixed-size batches per key, preserving insertion order within each key. Streams items directly into their respective batches at runtime, eliminating the overhead of post-processing 1D arrays into chunks. It abstracts key-based batch management, allowing users to focus on application logic. Ideal for delayed processing tasks such as bulk writes per tenant, per-topic Kafka publishing, or key-partitioned data ingestion workflows.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ori88c/keyed-batched-items-accumulator.git"
+  },
+  "contributors": [
+    "Ori Cohen (https://github.com/ori88c/)"
+  ],
+  "homepage": "https://github.com/ori88c/keyed-batched-items-accumulator#readme",
+  "author": "Ori Cohen",
+  "license": "Apache-2.0",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "jest"
+  },
+  "keywords": [
+    "accumulator",
+    "by-key",
+    "keyed-accumulator",
+    "batch",
+    "keyed-batch",
+    "keyed-items",
+    "partition",
+    "partitioned",
+    "partitioned-items",
+    "partitioned-accumulation",
+    "chunk",
+    "array-chunk",
+    "fixed-chunks",
+    "equal-length-chunks",
+    "equal-length-batches",
+    "accumulate",
+    "batched-items",
+    "batched-elements",
+    "chunked-items",
+    "chunked-elements",
+    "fixed-batch",
+    "fixed-size",
+    "accumulated-items",
+    "batch-management",
+    "stream-items",
+    "data-stream",
+    "runtime-streaming",
+    "delayed-execution",
+    "status-getters",
+    "nodejs",
+    "node-js",
+    "typescript",
+    "ts",
+    "ES2020"
+  ],
+  "engines": {
+    "node": ">=14.5.0"
+  },
+  "dependencies": {
+    "batched-items-accumulator": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "ts-jest": "^29.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  },
+  "types": "./dist/keyed-batched-items-accumulator.d.ts",
+  "main": "./dist/keyed-batched-items-accumulator.js",
+  "files": [
+    "src/",
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ]
+}
