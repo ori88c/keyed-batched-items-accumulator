@@ -172,7 +172,7 @@ class KeyedBatchedAccumulator {
             accumulator = new batched_items_accumulator_1.BatchedAccumulator(this._batchSize);
             this._keyToAccumulator.set(key, accumulator);
         }
-        accumulator.accumulateItem(item);
+        accumulator.push(item);
     }
     /**
      * Extracts all accumulated batches per key and returns a map from each key to its

@@ -190,7 +190,7 @@ export class KeyedBatchedAccumulator<ItemType> {
       this._keyToAccumulator.set(key, accumulator);
     }
 
-    accumulator.accumulateItem(item);
+    accumulator.push(item);
   }
 
   /**
